@@ -25,11 +25,11 @@ Toolkit.run(async tools => {
 
   let version
   tools.outputs.update = 'true'
-  if (messages.map(message => message.includes('patch')).includes(true)) {
+  if (messages.map(message => message.includes('bump patch')).includes(true)) {
     version = 'patch'
-  } else if (messages.map(message => message.includes('major')).includes(true)) {
+  } else if (messages.map(message => message.includes('bump major')).includes(true)) {
     version = 'major'
-  } else if (messages.map(message => message.toLowerCase().includes('minor')).includes(true)) {
+  } else if (messages.map(message => message.toLowerCase().includes('bump minor')).includes(true)) {
     version = 'minor'
   } else {
     tools.outputs.update = 'false'
