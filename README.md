@@ -16,10 +16,10 @@ Make sure you use the `actions/checkout@v2` action!
 ### Workflow
 
 * Based on the commit messages, increment the version from the latest release.
-  * If the string "major" is found anywhere in any of the commit messages or descriptions the major 
+  * If the string "bump major" is found anywhere in any of the commit messages or descriptions the major 
     version will be incremented.
-  * If includes "minor" then the minor version will be increased.
-  * If includes "patch" then the patch version will be increased.
+  * If includes "bump minor" then the minor version will be increased.
+  * If includes "bump patch" then the patch version will be increased.
 * Push the bumped npm version in package.json back into the repo.
 * Push a tag for the new version back into the repo.
 
