@@ -11,6 +11,8 @@ if (process.env.PACKAGEJSON_DIR) {
 Toolkit.run(async tools => {
   const pkg = tools.getPackageJSON()
   const event = tools.context.payload
+  
+  tools.outputs = tools.outputs || {}
 
   const messages = event.commits.map(commit => commit.message + '\n' + commit.body)
 
